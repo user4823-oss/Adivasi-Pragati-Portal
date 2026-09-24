@@ -1,0 +1,569 @@
+[
+  {
+    "id": "NFST-2026-001",
+    "applicantEmail": "applicant@nfst.gov.in",
+    "name": "Mangal Soren",
+    "dob": "1998-05-14",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 28000,
+    "institution": "Jawaharlal Nehru University, New Delhi",
+    "marksPercentage": 78.5,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "st_caste_cert_msoren.pdf",
+      "marksheet": "pg_marksheet_msoren.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-08T10:30:00.000Z",
+    "updatedAt": "2026-03-08T10:30:00.000Z",
+    "remarks": "Application under scrutiny by MoTA Fellowship Desk.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-08T10:30:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "applicant@nfst.gov.in",
+        "reason": "Initial application submission under Scheme ARG45."
+      },
+      {
+        "timestamp": "2026-03-10T11:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "Ministry Verification Desk",
+        "reason": "Initial document screening completed; queued for merit review."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-002",
+    "applicantEmail": "sunita.j@tripurauniv.ac.in",
+    "name": "Sunita Jamatia",
+    "dob": "1997-11-20",
+    "category": "ST",
+    "specialCategory": "Divyangan",
+    "specialCategoryDetails": "Locomotor Disability 45% (UDID verified)",
+    "course": "PhD",
+    "fellowshipAmount": 28000,
+    "institution": "Tripura University, Agartala",
+    "marksPercentage": 82.0,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "st_cert_sjamatia.pdf",
+      "marksheet": "msc_marksheet_sjamatia.pdf",
+      "disabilityCertificate": "udid_card_sjamatia.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-02T14:15:00.000Z",
+    "updatedAt": "2026-03-05T09:00:00.000Z",
+    "remarks": "Divyangan priority queue candidate under review.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-02T14:15:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "sunita.j@tripurauniv.ac.in",
+        "reason": "Application submitted with UDID card."
+      },
+      {
+        "timestamp": "2026-03-05T09:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "Ministry Scrutiny Cell",
+        "reason": "UDID disability certificate authenticated."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-003",
+    "applicantEmail": "birsa.kujur@ranchiuniv.ac.in",
+    "name": "Birsa Kujur",
+    "dob": "1999-01-18",
+    "category": "ST",
+    "specialCategory": "PVTG",
+    "specialCategoryDetails": "Birhor Community (Particularly Vulnerable Tribal Group)",
+    "course": "M.Phil",
+    "fellowshipAmount": 25000,
+    "institution": "Ranchi University, Jharkhand",
+    "marksPercentage": 68.4,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "pvtg_tribal_cert_bkujur.pdf",
+      "marksheet": "ma_marksheet_bkujur.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-04T11:45:00.000Z",
+    "updatedAt": "2026-03-06T12:30:00.000Z",
+    "remarks": "PVTG candidate priority queue per scheme guideline 4.2.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-04T11:45:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "birsa.kujur@ranchiuniv.ac.in",
+        "reason": "PVTG fellowship application submitted."
+      },
+      {
+        "timestamp": "2026-03-06T12:30:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "Ministry Scrutiny Cell",
+        "reason": "Birhor tribal certificate verified in state PVTG registry."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-004",
+    "applicantEmail": "kamala.netam@igntu.ac.in",
+    "name": "Kamala Netam",
+    "dob": "1996-09-04",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 28000,
+    "institution": "Indira Gandhi National Tribal University, Amarkantak",
+    "marksPercentage": 74.2,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "st_gond_cert_knetam.pdf",
+      "marksheet": "ms_botany_marksheet_knetam.pdf"
+    },
+    "status": "Selected",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-02-15T09:20:00.000Z",
+    "updatedAt": "2026-03-01T16:00:00.000Z",
+    "remarks": "Selected by MoTA Selection Committee. Eligible for Sanction Letter generation.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-02-15T09:20:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "kamala.netam@igntu.ac.in",
+        "reason": "Initial application submission."
+      },
+      {
+        "timestamp": "2026-02-20T10:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "Ministry Scrutiny Cell",
+        "reason": "Verification passed."
+      },
+      {
+        "timestamp": "2026-03-01T16:00:00.000Z",
+        "fromStatus": "Under Review",
+        "toStatus": "Selected",
+        "changedBy": "Selection Committee",
+        "reason": "Merit list cutoff approved by Joint Secretary."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-005",
+    "applicantEmail": "rajeshwar.bodo@gauhati.ac.in",
+    "name": "Rajeshwar Bodo",
+    "dob": "1998-05-14",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "M.Phil",
+    "fellowshipAmount": 25000,
+    "institution": "Gauhati University, Assam",
+    "marksPercentage": 58.0,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "bodo_caste_cert_rbodo.pdf",
+      "marksheet": "marksheet_rbodo_sem4.pdf"
+    },
+    "status": "Deficiency Raised",
+    "duplicateOf": null,
+    "flagReason": "Date of Birth mismatch: Form declared 1998-05-14, but Certificate OCR detected 1997-08-12. Please upload corrected birth/matriculation certificate.",
+    "flaggedDocument": "casteCertificate",
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-02-20T16:40:00.000Z",
+    "updatedAt": "2026-03-03T11:10:00.000Z",
+    "remarks": "Deficiency notice issued: Date of Birth mismatch detected.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-02-20T16:40:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "rajeshwar.bodo@gauhati.ac.in",
+        "reason": "Application submitted."
+      },
+      {
+        "timestamp": "2026-03-03T11:10:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Deficiency Raised",
+        "changedBy": "Ministry Scrutiny Cell",
+        "reason": "Date of Birth mismatch: Form declared 1998-05-14, but Certificate OCR detected 1997-08-12."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-006",
+    "applicantEmail": "anandi.rathwa@msubaroda.ac.in",
+    "name": "Anandi Rathwa",
+    "dob": "1995-12-03",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 28000,
+    "institution": "Maharaja Sayajirao University of Baroda, Gujarat",
+    "marksPercentage": 84.6,
+    "annualIncome": null,
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "documents": {
+      "casteCertificate": "rathwa_st_cert_arathwa.pdf",
+      "marksheet": "msc_chem_marksheet_arathwa.pdf"
+    },
+    "status": "Sanction Letter Generated",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-02-12T13:10:00.000Z",
+    "updatedAt": "2026-03-10T15:00:00.000Z",
+    "remarks": "Sanction letter generated. Ready for PFMS DBT disbursement.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-02-12T13:10:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "anandi.rathwa@msubaroda.ac.in",
+        "reason": "Ph.D. fellowship application submitted."
+      },
+      {
+        "timestamp": "2026-02-28T15:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Selected",
+        "changedBy": "Selection Committee",
+        "reason": "Top ranker (84.6%) selected on open merit."
+      },
+      {
+        "timestamp": "2026-03-10T15:00:00.000Z",
+        "fromStatus": "Selected",
+        "toStatus": "Sanction Letter Generated",
+        "changedBy": "Ministry Desk Officer",
+        "reason": "Official award sanction order MoTA/NFST/2026/NFST-2026-006 generated."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-007",
+    "applicantEmail": "laxman.murmu@oxfordalumni.org",
+    "name": "Laxman Murmu",
+    "dob": "1996-07-22",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 1500000,
+    "institution": "University of Oxford, United Kingdom",
+    "marksPercentage": 81.2,
+    "annualIncome": 420000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "st_cert_lmurmu.pdf",
+      "marksheet": "msc_marksheet_lmurmu.pdf",
+      "admissionIntentProof": "oxford_unconditional_offer.pdf",
+      "incomeCertificate": "tehsildar_income_cert_2025.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-12T09:00:00.000Z",
+    "updatedAt": "2026-03-14T14:20:00.000Z",
+    "remarks": "Overseas PhD application with verified Oxford offer letter and income certificate below Rs. 6 Lakhs.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-12T09:00:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "laxman.murmu@oxfordalumni.org",
+        "reason": "Application for NOS Overseas PhD submitted."
+      },
+      {
+        "timestamp": "2026-03-14T14:20:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Income and Oxford unconditional offer authenticated."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-010",
+    "applicantEmail": "babulal.marandi@melbournealumni.org",
+    "name": "Babulal Marandi",
+    "dob": "1997-03-15",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "Masters",
+    "fellowshipAmount": 1200000,
+    "institution": "University of Melbourne, Australia",
+    "marksPercentage": 84.5,
+    "annualIncome": 380000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "st_cert_bmarandi.pdf",
+      "marksheet": "degree_bmarandi.pdf",
+      "admissionIntentProof": "melbourne_offer.pdf",
+      "incomeCertificate": "income_bmarandi.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-11T11:00:00.000Z",
+    "updatedAt": "2026-03-13T10:00:00.000Z",
+    "remarks": "Candidate holds offer from Melbourne University.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-11T11:00:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "babulal.marandi@melbournealumni.org",
+        "reason": "Submitted NOS application."
+      },
+      {
+        "timestamp": "2026-03-13T10:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Verified income under ₹6L."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-011",
+    "applicantEmail": "jayant.kerketta@edinburgh.ac.uk",
+    "name": "Jayant Kerketta",
+    "dob": "1996-10-09",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 1500000,
+    "institution": "University of Edinburgh, UK",
+    "marksPercentage": 79.0,
+    "annualIncome": 520000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "st_cert_jkerketta.pdf",
+      "marksheet": "pg_marksheet_jkerketta.pdf",
+      "admissionIntentProof": "edinburgh_offer.pdf",
+      "incomeCertificate": "income_jkerketta.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-09T14:30:00.000Z",
+    "updatedAt": "2026-03-12T16:00:00.000Z",
+    "remarks": "Ph.D. Artificial Intelligence overseas research proposal.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-09T14:30:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "jayant.kerketta@edinburgh.ac.uk",
+        "reason": "Application submitted."
+      },
+      {
+        "timestamp": "2026-03-12T16:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Candidate documents authenticated."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-012",
+    "applicantEmail": "pravin.birhor@jharkhandtribal.org",
+    "name": "Pravin Birhor",
+    "dob": "1998-11-04",
+    "category": "ST",
+    "specialCategory": "PVTG",
+    "specialCategoryDetails": "Birhor Community (Particularly Vulnerable Tribal Group)",
+    "course": "Masters",
+    "fellowshipAmount": 1200000,
+    "institution": "Monash University, Australia",
+    "marksPercentage": 71.5,
+    "annualIncome": 180000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "pvtg_cert_pbirhor.pdf",
+      "marksheet": "degree_pbirhor.pdf",
+      "admissionIntentProof": "monash_admission.pdf",
+      "incomeCertificate": "income_pbirhor.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-10T12:00:00.000Z",
+    "updatedAt": "2026-03-13T15:00:00.000Z",
+    "remarks": "Particularly Vulnerable Tribal Group candidate with Monash offer letter.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-10T12:00:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "pravin.birhor@jharkhandtribal.org",
+        "reason": "PVTG application for NOS abroad submitted."
+      },
+      {
+        "timestamp": "2026-03-13T15:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Verified Birhor PVTG community certificate."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-013",
+    "applicantEmail": "devika.baiga@mptribal.gov.in",
+    "name": "Devika Baiga",
+    "dob": "1997-06-18",
+    "category": "ST",
+    "specialCategory": "PVTG",
+    "specialCategoryDetails": "Baiga Community (Particularly Vulnerable Tribal Group)",
+    "course": "PhD",
+    "fellowshipAmount": 1500000,
+    "institution": "University of Leeds, UK",
+    "marksPercentage": 69.8,
+    "annualIncome": 140000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "baiga_pvtg_cert_dbaiga.pdf",
+      "marksheet": "msc_marksheet_dbaiga.pdf",
+      "admissionIntentProof": "leeds_offer_letter.pdf",
+      "incomeCertificate": "income_dbaiga.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-08T16:20:00.000Z",
+    "updatedAt": "2026-03-11T12:00:00.000Z",
+    "remarks": "PVTG scholar seeking Ph.D. in Climate Adaptation at University of Leeds.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-08T16:20:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "devika.baiga@mptribal.gov.in",
+        "reason": "Submitted NOS Ph.D. application."
+      },
+      {
+        "timestamp": "2026-03-11T12:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Baiga PVTG certificate validated."
+      }
+    ]
+  },
+  {
+    "id": "NOS-2026-014",
+    "applicantEmail": "sumitra.gond@kclalumni.org",
+    "name": "Sumitra Gond",
+    "dob": "1996-08-30",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "course": "PhD",
+    "fellowshipAmount": 1500000,
+    "institution": "King's College London, UK",
+    "marksPercentage": 75.0,
+    "annualIncome": 490000,
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "documents": {
+      "casteCertificate": "st_cert_sgond.pdf",
+      "marksheet": "pg_marksheet_sgond.pdf",
+      "admissionIntentProof": "kcl_offer.pdf",
+      "incomeCertificate": "income_sgond.pdf"
+    },
+    "status": "Under Review",
+    "duplicateOf": null,
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-03-13T10:15:00.000Z",
+    "updatedAt": "2026-03-15T11:00:00.000Z",
+    "remarks": "Screening completed. Scheduled for Interview.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-03-13T10:15:00.000Z",
+        "fromStatus": null,
+        "toStatus": "Submitted",
+        "changedBy": "sumitra.gond@kclalumni.org",
+        "reason": "NOS application submitted."
+      },
+      {
+        "timestamp": "2026-03-15T11:00:00.000Z",
+        "fromStatus": "Submitted",
+        "toStatus": "Under Review",
+        "changedBy": "NOS Screening Committee",
+        "reason": "Verified for selection committee ranking."
+      }
+    ]
+  }
+]

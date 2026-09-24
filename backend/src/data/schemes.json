@@ -1,0 +1,111 @@
+[
+  {
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "description": "Fellowship for Scheduled Tribe scholars pursuing regular and full-time M.Phil and Ph.D. courses in Indian Universities and Institutes.",
+    "eligibility": {
+      "degreeLevels": ["M.Phil", "PhD"],
+      "minMarks": 55.0,
+      "incomeCeiling": null,
+      "category": "ST",
+      "specialPreferences": ["PVTG", "Divyangan", "Girls"]
+    },
+    "selectionMethod": "merit",
+    "selectionMethodDescription": "Merit-based ranking based on postgraduate percentage, with statutory preference for PVTG and Divyangan candidates.",
+    "requiredDocuments": [
+      {
+        "id": "casteCertificate",
+        "label": "Scheduled Tribe (ST) Caste Certificate",
+        "required": true,
+        "helpText": "Government issued ST certificate from a competent revenue authority."
+      },
+      {
+        "id": "marksheet",
+        "label": "Postgraduate Degree Final Marksheet / Degree",
+        "required": true,
+        "helpText": "Official university transcript verifying postgraduate percentage marks."
+      }
+    ],
+    "quotaRules": [
+      {
+        "category": "Scheduled Tribe (All India)",
+        "reservedSeats": 750,
+        "totalSeats": 750,
+        "notes": "Statutory priority queue for PVTG candidates and 5% horizontal reservation for Divyangan."
+      }
+    ],
+    "benefitAmount": {
+      "type": "monthly_fellowship",
+      "currency": "INR",
+      "rates": {
+        "M.Phil": 25000,
+        "PhD": 28000
+      },
+      "display": "₹25,000/month (M.Phil) or ₹28,000/month (Ph.D.)"
+    }
+  },
+  {
+    "schemeCode": "AZKMI",
+    "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
+    "description": "Financial assistance for meritorious ST students to pursue Master's level courses, Ph.D. and Post-Doctoral research programmes abroad.",
+    "eligibility": {
+      "degreeLevels": ["Masters", "PhD", "Post-Doc"],
+      "minMarks": 60.0,
+      "incomeCeiling": 600000,
+      "category": "ST",
+      "specialPreferences": ["PVTG"]
+    },
+    "selectionMethod": "interview",
+    "selectionMethodDescription": "Selection through Screening Committee evaluation followed by an Interview by the Selection Committee.",
+    "requiredDocuments": [
+      {
+        "id": "casteCertificate",
+        "label": "Scheduled Tribe (ST) Caste Certificate",
+        "required": true,
+        "helpText": "Government issued ST certificate from competent authority."
+      },
+      {
+        "id": "marksheet",
+        "label": "Qualifying Degree Marksheet / Degree Transcript",
+        "required": true,
+        "helpText": "Transcript verifying minimum 60% marks in qualifying degree."
+      },
+      {
+        "id": "admissionIntentProof",
+        "label": "Admission Intent Proof / Offer Letter from Accredited Foreign University",
+        "required": true,
+        "helpText": "Unconditional offer letter or confirmed admission proof from an accredited institution abroad."
+      },
+      {
+        "id": "incomeCertificate",
+        "label": "Family Income Certificate (Revenue Authority)",
+        "required": true,
+        "helpText": "Competent authority certificate proving total family income ≤ ₹6,00,000/annum."
+      }
+    ],
+    "quotaRules": [
+      {
+        "category": "General ST",
+        "reservedSeats": 17,
+        "totalSeats": 20,
+        "notes": "Merit and interview selected ST scholars."
+      },
+      {
+        "category": "PVTG",
+        "reservedSeats": 3,
+        "totalSeats": 20,
+        "notes": "3 earmarked seats exclusively reserved for Particularly Vulnerable Tribal Groups."
+      }
+    ],
+    "benefitAmount": {
+      "type": "annual_scholarship",
+      "currency": "INR",
+      "rates": {
+        "Masters": 1200000,
+        "PhD": 1500000,
+        "Post-Doc": 1800000
+      },
+      "display": "Full Tuition + Living Allowance (~₹12L–₹18L/year)"
+    }
+  }
+]
