@@ -1,5 +1,109 @@
 [
   {
+    "id": "NFST-2026-014",
+    "applicantEmail": "applicant@nfst.gov.in",
+    "name": "Mangal Soren",
+    "dob": "1998-05-14",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "course": "M.Phil",
+    "fellowshipAmount": 25000,
+    "institution": "Jawaharlal Nehru University, New Delhi",
+    "marksPercentage": 78.5,
+    "annualIncome": null,
+    "documents": {
+      "casteCertificate": "st_caste_cert_msoren.pdf",
+      "marksheet": "pg_marksheet_msoren.pdf"
+    },
+    "status": "Selected",
+    "duplicateOf": "NFST-2026-013",
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-09-25T02:55:57.024Z",
+    "updatedAt": "2026-09-25T02:56:29.542Z",
+    "remarks": "Automated Duplicate Flag: Candidate details closely match existing application NFST-2026-013 (Mangal Soren, DOB: 1998-05-14). Flagged for committee review.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-09-25T02:55:57.024Z",
+        "fromStatus": null,
+        "toStatus": "Flagged - Possible Duplicate",
+        "changedBy": "applicant@nfst.gov.in",
+        "reason": "Automated Duplicate Flag: Candidate details closely match existing application NFST-2026-013 (Mangal Soren, DOB: 1998-05-14). Flagged for committee review."
+      },
+      {
+        "timestamp": "2026-09-25T02:56:29.542Z",
+        "fromStatus": "Flagged - Possible Duplicate",
+        "toStatus": "Selected",
+        "changedBy": "Ministry Officer",
+        "reason": "Automated Duplicate Flag: Candidate details closely match existing application NFST-2026-013 (Mangal Soren, DOB: 1998-05-14). Flagged for committee review."
+      }
+    ]
+  },
+  {
+    "id": "NFST-2026-013",
+    "applicantEmail": "applicant@nfst.gov.in",
+    "name": "Mangal Soren",
+    "dob": "1998-05-14",
+    "category": "ST",
+    "specialCategory": "None",
+    "specialCategoryDetails": "",
+    "schemeCode": "ARG45",
+    "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
+    "course": "M.Phil",
+    "fellowshipAmount": 25000,
+    "institution": "Jawaharlal Nehru University, New Delhi",
+    "marksPercentage": 78.5,
+    "annualIncome": null,
+    "documents": {
+      "casteCertificate": "st_caste_cert_msoren.pdf",
+      "marksheet": "pg_marksheet_msoren.pdf"
+    },
+    "status": "Renewal Pending",
+    "duplicateOf": "NFST-2026-001",
+    "flagReason": null,
+    "flaggedDocument": null,
+    "overrideReason": null,
+    "overriddenBy": null,
+    "submittedAt": "2026-09-24T18:13:44.960Z",
+    "updatedAt": "2026-09-24T18:14:09.238Z",
+    "remarks": "Annual academic milestone progress review triggered.",
+    "auditTrail": [
+      {
+        "timestamp": "2026-09-24T18:13:44.960Z",
+        "fromStatus": null,
+        "toStatus": "Flagged - Possible Duplicate",
+        "changedBy": "applicant@nfst.gov.in",
+        "reason": "Automated Duplicate Flag: Candidate details closely match existing application NFST-2026-001 (Mangal Soren, DOB: 1998-05-14). Flagged for committee review."
+      },
+      {
+        "timestamp": "2026-09-24T18:14:02.277Z",
+        "fromStatus": "Flagged - Possible Duplicate",
+        "toStatus": "Selected",
+        "changedBy": "Ministry Officer",
+        "reason": "Automated Duplicate Flag: Candidate details closely match existing application NFST-2026-001 (Mangal Soren, DOB: 1998-05-14). Flagged for committee review."
+      },
+      {
+        "timestamp": "2026-09-24T18:14:09.230Z",
+        "fromStatus": "Selected",
+        "toStatus": "Renewal Pending",
+        "changedBy": "MoTA Admin",
+        "reason": "Annual academic milestone progress review triggered."
+      },
+      {
+        "timestamp": "2026-09-24T18:14:09.238Z",
+        "fromStatus": "Renewal Pending",
+        "toStatus": "Renewal Pending",
+        "changedBy": "Ministry Officer",
+        "reason": "Annual academic milestone progress review triggered."
+      }
+    ]
+  },
+  {
     "id": "NFST-2026-001",
     "applicantEmail": "applicant@nfst.gov.in",
     "name": "Mangal Soren",
@@ -18,14 +122,14 @@
       "casteCertificate": "st_caste_cert_msoren.pdf",
       "marksheet": "pg_marksheet_msoren.pdf"
     },
-    "status": "Under Review",
+    "status": "Rejected",
     "duplicateOf": null,
     "flagReason": null,
     "flaggedDocument": null,
     "overrideReason": null,
     "overriddenBy": null,
     "submittedAt": "2026-03-08T10:30:00.000Z",
-    "updatedAt": "2026-03-08T10:30:00.000Z",
+    "updatedAt": "2026-09-24T18:11:55.436Z",
     "remarks": "Application under scrutiny by MoTA Fellowship Desk.",
     "auditTrail": [
       {
@@ -41,6 +145,20 @@
         "toStatus": "Under Review",
         "changedBy": "Ministry Verification Desk",
         "reason": "Initial document screening completed; queued for merit review."
+      },
+      {
+        "timestamp": "2026-09-24T17:59:13.053Z",
+        "fromStatus": "Under Review",
+        "toStatus": "Selected",
+        "changedBy": "Ministry Officer",
+        "reason": "Application under scrutiny by MoTA Fellowship Desk."
+      },
+      {
+        "timestamp": "2026-09-24T18:11:55.436Z",
+        "fromStatus": "Selected",
+        "toStatus": "Rejected",
+        "changedBy": "Ministry Officer",
+        "reason": "Application under scrutiny by MoTA Fellowship Desk."
       }
     ]
   },
@@ -55,7 +173,7 @@
     "course": "PhD",
     "fellowshipAmount": 28000,
     "institution": "Tripura University, Agartala",
-    "marksPercentage": 82.0,
+    "marksPercentage": 82,
     "annualIncome": null,
     "schemeCode": "ARG45",
     "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
@@ -198,7 +316,7 @@
     "course": "M.Phil",
     "fellowshipAmount": 25000,
     "institution": "Gauhati University, Assam",
-    "marksPercentage": 58.0,
+    "marksPercentage": 58,
     "annualIncome": null,
     "schemeCode": "ARG45",
     "schemeName": "National Fellowship for Higher Education of ST Students (NFST)",
@@ -208,12 +326,12 @@
     },
     "status": "Deficiency Raised",
     "duplicateOf": null,
-    "flagReason": "Date of Birth mismatch: Form declared 1998-05-14, but Certificate OCR detected 1997-08-12. Please upload corrected birth/matriculation certificate.",
+    "flagReason": "Date of Birth mismatch: Form declared DOB differs from certificate OCR date.",
     "flaggedDocument": "casteCertificate",
     "overrideReason": null,
     "overriddenBy": null,
     "submittedAt": "2026-02-20T16:40:00.000Z",
-    "updatedAt": "2026-03-03T11:10:00.000Z",
+    "updatedAt": "2026-09-24T18:11:10.378Z",
     "remarks": "Deficiency notice issued: Date of Birth mismatch detected.",
     "auditTrail": [
       {
@@ -229,6 +347,13 @@
         "toStatus": "Deficiency Raised",
         "changedBy": "Ministry Scrutiny Cell",
         "reason": "Date of Birth mismatch: Form declared 1998-05-14, but Certificate OCR detected 1997-08-12."
+      },
+      {
+        "timestamp": "2026-09-24T18:11:10.378Z",
+        "fromStatus": "Deficiency Raised",
+        "toStatus": "Deficiency Raised",
+        "changedBy": "Ministry Officer",
+        "reason": "Deficiency notice issued: Date of Birth mismatch detected."
       }
     ]
   },
@@ -389,7 +514,7 @@
     "course": "PhD",
     "fellowshipAmount": 1500000,
     "institution": "University of Edinburgh, UK",
-    "marksPercentage": 79.0,
+    "marksPercentage": 79,
     "annualIncome": 520000,
     "schemeCode": "AZKMI",
     "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",
@@ -530,7 +655,7 @@
     "course": "PhD",
     "fellowshipAmount": 1500000,
     "institution": "King's College London, UK",
-    "marksPercentage": 75.0,
+    "marksPercentage": 75,
     "annualIncome": 490000,
     "schemeCode": "AZKMI",
     "schemeName": "National Overseas Scholarship for ST Candidates (NOS)",

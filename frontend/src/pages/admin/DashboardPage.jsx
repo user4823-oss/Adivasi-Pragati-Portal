@@ -4,12 +4,14 @@ import { fetchApplications } from '../../services/api';
 import Card from '../../components/shared/Card';
 import Button from '../../components/shared/Button';
 import ApplicantTable from '../../components/admin/ApplicantTable';
+import WorkflowVisualizerModal from '../../components/shared/WorkflowVisualizerModal';
 
 export default function DashboardPage() {
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [filterStatus, setFilterStatus] = useState('ALL');
+  const [showWorkflowModal, setShowWorkflowModal] = useState(false);
   const navigate = useNavigate();
 
   const loadData = async () => {
@@ -73,9 +75,17 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        <Button variant="outline" size="sm" onClick={loadData}>
-          ↻ Refresh Records
-        </Button>
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+          <Button variant="outline" size="sm" onClick={() => setShowWorkflowModal(true)}>
+            🗺️ Workflow Explorer
+          </Button>
+          <Button variant="outline" size="sm" onClick={() => navigate('/admin/selection')}>
+            ⚖️ Selection Desk
+          </Button>
+          <Button variant="outline" size="sm" onClick={loadData}>
+            ↻ Refresh Records
+          </Button>
+        </div>
       </div>
 
       {/* Metrics Row */}
@@ -242,6 +252,13 @@ export default function DashboardPage() {
           />
         )}
       </Card>
+
+      {/* System Workflow Visualizer Explorer Modal */}
+      {showWorkflowModal && (
+        <WorkflowVisualizerModal
+          onClose={() => setShowWorkflowModal(false)}
+        />
+      )}
     </div>
   );
 }

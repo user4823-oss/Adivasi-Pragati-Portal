@@ -6,6 +6,8 @@ import Card from '../../components/shared/Card';
 import Button from '../../components/shared/Button';
 import StatusBadge from '../../components/shared/StatusBadge';
 import Toast from '../../components/shared/Toast';
+import SanctionLetterModal from '../../components/shared/SanctionLetterModal';
+import WorkflowVisualizerModal from '../../components/shared/WorkflowVisualizerModal';
 
 export default function StatusPage() {
   const { user } = useAuth();
@@ -16,6 +18,8 @@ export default function StatusPage() {
   const [error, setError] = useState('');
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('success');
+  const [showSanctionModal, setShowSanctionModal] = useState(false);
+  const [showWorkflowModal, setShowWorkflowModal] = useState(false);
 
   // Resubmission state
   const [resubmitFileName, setResubmitFileName] = useState('');
@@ -151,9 +155,14 @@ export default function StatusPage() {
             Ministry of Tribal Affairs • {application.schemeName || `Scheme ${application.schemeCode || 'ARG45'}`}
           </p>
         </div>
-        <Button variant="outline" size="sm" onClick={loadData}>
-          ↻ Refresh Status
-        </Button>
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+          <Button variant="outline" size="sm" onClick={() => setShowWorkflowModal(true)}>
+            🗺️ Workflow Guide
+          </Button>
+          <Button variant="outline" size="sm" onClick={loadData}>
+            ↻ Refresh Status
+          </Button>
+        </div>
       </div>
 
       {/* 1. DEFICIENCY RAISED BANNER & RESUBMISSION FORM */}
@@ -349,6 +358,75 @@ export default function StatusPage() {
         </div>
       )}
 
+      {/* AWARD & SANCTION LETTER SHOWCASE BANNER (for Selected & Post-Selection Awardees) */}
+      {(['Selected', 'Sanction Letter Generated', 'Admission Proof Pending', 'Disbursed', 'Renewal Pending', 'Renewed'].includes(application.status)) && (
+        <div
+          style={{
+            backgroundColor: '#ECFDF5',
+            border: '2px solid #10B981',
+            borderRadius: 'var(--radius-md)',
+            padding: '1.5rem',
+            marginBottom: '1.75rem',
+            boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.1)'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ fontSize: '2rem' }}>🏆</span>
+              <div>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#065F46' }}>
+                  Fellowship Award Confirmed by Selection Committee!
+                </h3>
+                <p style={{ fontSize: '0.85rem', color: '#047857' }}>
+                  Congratulations! Your application has been approved under {application.schemeName || 'MoTA Fellowship'}.
+                </p>
+              </div>
+            </div>
+
+            <Button
+              variant="primary"
+              onClick={() => setShowSanctionModal(true)}
+              style={{
+                backgroundColor: '#047857',
+                borderColor: '#047857',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                boxShadow: '0 2px 4px rgba(4, 120, 87, 0.3)'
+              }}
+            >
+              <span>📜</span>
+              <span>View & Download Official Sanction Letter</span>
+            </Button>
+          </div>
+
+          {/* Post-Award DBT Lifecycle Stepper */}
+          <div style={{ borderTop: '1px solid #A7F3D0', paddingTop: '1rem' }}>
+            <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#065F46', textTransform: 'uppercase', marginBottom: '0.75rem', letterSpacing: '0.5px' }}>
+              Post-Award Disbursement & Renewal Lifecycle Track:
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '0.75rem' }}>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '0.65rem 0.85rem', borderRadius: '6px', border: '1px solid #6EE7B7' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#047857' }}>1. Sanction Issued ✓</div>
+                <div style={{ fontSize: '0.72rem', color: '#475569', marginTop: '0.15rem' }}>Official MoTA Order Generated</div>
+              </div>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '0.65rem 0.85rem', borderRadius: '6px', border: '1px solid #E2E8F0' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1E293B' }}>2. Admission Proof</div>
+                <div style={{ fontSize: '0.72rem', color: '#475569', marginTop: '0.15rem' }}>University joining letter verification</div>
+              </div>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '0.65rem 0.85rem', borderRadius: '6px', border: '1px solid #E2E8F0' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1E293B' }}>3. PFMS DBT Disbursal</div>
+                <div style={{ fontSize: '0.72rem', color: '#475569', marginTop: '0.15rem' }}>Direct credit to Aadhaar bank a/c</div>
+              </div>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '0.65rem 0.85rem', borderRadius: '6px', border: '1px solid #E2E8F0' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1E293B' }}>4. Annual Renewal</div>
+                <div style={{ fontSize: '0.72rem', color: '#475569', marginTop: '0.15rem' }}>Annual progress verification</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Dossier Summary Card */}
       <Card
         title="Candidate Dossier Overview"
@@ -483,6 +561,21 @@ export default function StatusPage() {
           </div>
         )}
       </Card>
+
+      {/* Official MoTA Digital Sanction Letter Modal */}
+      {showSanctionModal && (
+        <SanctionLetterModal
+          applicationId={application.id}
+          onClose={() => setShowSanctionModal(false)}
+        />
+      )}
+
+      {/* System Workflow Visualizer Explorer Modal */}
+      {showWorkflowModal && (
+        <WorkflowVisualizerModal
+          onClose={() => setShowWorkflowModal(false)}
+        />
+      )}
     </div>
   );
 }

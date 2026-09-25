@@ -10,6 +10,7 @@ import StatusPage from './pages/applicant/StatusPage';
 import DashboardPage from './pages/admin/DashboardPage';
 import ApplicationReviewPage from './pages/admin/ApplicationReviewPage';
 import SchemeConfigPage from './pages/admin/SchemeConfigPage';
+import QuotaSelectionPage from './pages/admin/QuotaSelectionPage';
 
 /**
  * Route protection for Applicant-only screens
@@ -119,6 +120,14 @@ export default function App() {
                 element={
                   <ProtectedAdminRoute>
                     <SchemeConfigPage />
+                  </ProtectedAdminRoute>
+                }
+              />
+              <Route
+                path="/admin/selection"
+                element={
+                  <ProtectedAdminRoute>
+                    <QuotaSelectionPage />
                   </ProtectedAdminRoute>
                 }
               />

@@ -759,3 +759,23 @@ a:hover {
   background-color: #F8FAFC;
 }
 
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-sanction-letter,
+  .printable-sanction-letter * {
+    visibility: visible;
+  }
+  .printable-sanction-letter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20mm !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+

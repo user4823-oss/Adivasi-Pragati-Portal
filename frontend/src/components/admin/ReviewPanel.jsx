@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Card from '../shared/Card';
 import StatusBadge from '../shared/StatusBadge';
 import Button from '../shared/Button';
+import SanctionLetterModal from '../shared/SanctionLetterModal';
 import { getMockAnalysisForApplication, STANDARD_DEFICIENCY_REASONS } from '../../data/mockDocumentAnalysis';
+import { advanceLifecycle } from '../../services/api';
 
 export default function ReviewPanel({
   application,
@@ -15,6 +17,8 @@ export default function ReviewPanel({
   const [remarks, setRemarks] = useState(application.remarks || '');
   const [feedbackMsg, setFeedbackMsg] = useState('');
   const [showDeficiencyDesk, setShowDeficiencyDesk] = useState(false);
+  const [showSanctionModal, setShowSanctionModal] = useState(false);
+  const [isAdvancingLifecycle, setIsAdvancingLifecycle] = useState(false);
 
   const analysis = getMockAnalysisForApplication(application);
 
@@ -44,6 +48,24 @@ export default function ReviewPanel({
       return;
     }
     handleAction('Deficiency Raised', finalReason, targetDoc);
+  };
+
+  const handleAdvanceLifecycle = async (nextStatus, note = '') => {
+    try {
+      setIsAdvancingLifecycle(true);
+      setFeedbackMsg('');
+      const updated = await advanceLifecycle(application.id, nextStatus, note);
+      if (updated) {
+        setFeedbackMsg(`Application successfully advanced to lifecycle state: "${nextStatus}".`);
+        if (onStatusUpdate) {
+          onStatusUpdate(application.id, nextStatus, note);
+        }
+      }
+    } catch (err) {
+      alert(`Lifecycle transition failed: ${err.message}`);
+    } finally {
+      setIsAdvancingLifecycle(false);
+    }
   };
 
   const fellowshipMonthly = application.course === 'M.Phil' ? 25000 : 28000;
@@ -641,6 +663,149 @@ export default function ReviewPanel({
           </Button>
         </div>
       </Card>
+
+      {/* Post-Selection & DBT Lifecycle Management Card */}
+      {['Selected', 'Sanction Letter Generated', 'Admission Proof Pending', 'Disbursed', 'Renewal Pending', 'Renewed'].includes(application.status) && (
+        <Card
+          title="🏆 Post-Selection & DBT Lifecycle Desk"
+          subtitle="Sanction letter generation, university admission verification, PFMS disbursal, and annual renewals"
+          headerAction={
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => setShowSanctionModal(true)}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+            >
+              <span>📜</span>
+              <span>Preview Official Sanction Letter</span>
+            </Button>
+          }
+        >
+          <div style={{ backgroundColor: '#F8FAFC', padding: '1rem', borderRadius: '6px', marginBottom: '1.25rem', border: '1px solid #E2E8F0' }}>
+            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1E293B', marginBottom: '0.35rem' }}>
+              Current State Machine Stage: <StatusBadge status={application.status} />
+            </div>
+            <p style={{ fontSize: '0.82rem', color: '#64748B' }}>
+              Advance candidate along the Direct Benefit Transfer (DBT) and academic renewal pipeline once procedural checks are fulfilled.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={isAdvancingLifecycle}
+              onClick={() => handleAdvanceLifecycle('Sanction Letter Generated', 'Digital sanction order generated and signed.')}
+            >
+              1. Issue Sanction Letter
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={isAdvancingLifecycle}
+              onClick={() => handleAdvanceLifecycle('Admission Proof Pending', 'Foreign/Indian university offer and joining letter queued.')}
+            >
+              2. Verify Admission Proof
+            </Button>
+
+            <Button
+              variant="success"
+              size="sm"
+              disabled={isAdvancingLifecycle}
+              onClick={() => handleAdvanceLifecycle('Disbursed', 'Direct Benefit Transfer payout initiated via PFMS.')}
+            >
+              3. Disburse via DBT
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={isAdvancingLifecycle}
+              onClick={() => handleAdvanceLifecycle('Renewal Pending', 'Annual academic milestone progress review triggered.')}
+            >
+              4. Trigger Annual Renewal
+            </Button>
+
+            <Button
+              variant="primary"
+              size="sm"
+              disabled={isAdvancingLifecycle}
+              onClick={() => handleAdvanceLifecycle('Renewed', 'HOD progress verified; fellowship renewed for next tenure.')}
+            >
+              5. Confirm Renewed
+            </Button>
+          </div>
+        </Card>
+      )}
+
+      {/* Immutable Audit Trail Timeline */}
+      {application.auditTrail && application.auditTrail.length > 0 && (
+        <Card
+          title="🛡️ Tamper-Evident Audit Trail"
+          subtitle="Chronological log of all state transitions, verification events, and committee actions"
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            {application.auditTrail.map((ev, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: 'flex',
+                  gap: '1rem',
+                  alignItems: 'flex-start',
+                  padding: '0.75rem 1rem',
+                  backgroundColor: '#F8FAFC',
+                  borderRadius: '6px',
+                  border: '1px solid #E2E8F0',
+                  fontSize: '0.85rem'
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: '#E0F2FE',
+                    color: '#0369A1',
+                    fontWeight: 700,
+                    padding: '0.2rem 0.5rem',
+                    borderRadius: '4px',
+                    fontSize: '0.75rem',
+                    flexShrink: 0
+                  }}
+                >
+                  Step {idx + 1}
+                </div>
+
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontWeight: 700, color: '#0F172A' }}>
+                      {ev.fromStatus ? `${ev.fromStatus} → ` : ''}
+                      <span style={{ color: 'var(--color-primary)' }}>{ev.toStatus}</span>
+                    </div>
+                    <div style={{ fontSize: '0.75rem', color: '#64748B' }}>
+                      {ev.timestamp ? new Date(ev.timestamp).toLocaleString('en-IN') : '—'}
+                    </div>
+                  </div>
+
+                  <div style={{ color: '#334155', fontSize: '0.82rem' }}>
+                    {ev.reason}
+                  </div>
+
+                  <div style={{ fontSize: '0.72rem', color: '#64748B', marginTop: '0.25rem' }}>
+                    Actor: <strong>{ev.changedBy}</strong>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {/* Official MoTA Digital Sanction Letter Modal */}
+      {showSanctionModal && (
+        <SanctionLetterModal
+          applicationId={application.id}
+          onClose={() => setShowSanctionModal(false)}
+        />
+      )}
     </div>
   );
 }
