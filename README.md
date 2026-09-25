@@ -88,42 +88,49 @@ flowchart TD
     classDef alert fill:#FEE2E2,stroke:#EF4444,stroke-width:2px,color:#991B1B;
     classDef success fill:#ECFDF5,stroke:#10B981,stroke-width:2px,color:#065F46;
 
-    Start([🎓 Applicant Submits Application]) :::startEnd --> DuplicateCheck{Duplicate or Fraudulent<br/>Submission?} :::decision
+    Start(["🎓 Applicant Submits Application"]) --> DuplicateCheck{"Duplicate or Fraudulent<br/>Submission?"}
 
     %% Branch A: Duplicate Check
-    DuplicateCheck -- "Yes (Same Name + DOB)" --> FlagDuplicate["Flagged - Possible Duplicate<br/>Queued for Anti-Fraud Scrutiny"] :::alert
-    DuplicateCheck -- "No (Unique Record)" --> StatusSubmitted["Status: Submitted<br/>Saved in Audit Trail"] :::process
+    DuplicateCheck -- "Yes (Same Name + DOB)" --> FlagDuplicate["Flagged - Possible Duplicate<br/>Queued for Anti-Fraud Scrutiny"]
+    DuplicateCheck -- "No (Unique Record)" --> StatusSubmitted["Status: Submitted<br/>Saved in Audit Trail"]
 
     %% Branch B: Document Analysis
-    StatusSubmitted --> AIAnalysis["AI / OCR Verification Engine<br/>• Tesseract Text Extraction<br/>• Cross-match Name, DOB & %<br/>• Quota Document Integrity"] :::process
-    AIAnalysis --> ScrutinyReview["Status: Under Review<br/>MoTA Scrutiny Officer Desk"] :::process
+    StatusSubmitted --> AIAnalysis["AI / OCR Verification Engine<br/>• Tesseract Text Extraction<br/>• Cross-match Name, DOB & %<br/>• Quota Document Integrity"]
+    AIAnalysis --> ScrutinyReview["Status: Under Review<br/>MoTA Scrutiny Officer Desk"]
 
-    ScrutinyReview --> DefCheck{Discrepancy /<br/>Deficiency Detected?} :::decision
-    
+    ScrutinyReview --> DefCheck{"Discrepancy /<br/>Deficiency Detected?"}
+
     %% Branch C: Deficiency Loop
-    DefCheck -- "Yes (Missing/Mismatch Doc)" --> RaiseDef["Status: Deficiency Raised<br/>• Flagged Document Isolated<br/>• Specific Reason Issued"] :::alert
-    RaiseDef --> StudentAlert["Applicant Alerted via Dashboard<br/>Corrective Upload Desk Activated"] :::process
-    StudentAlert --> StudentResubmit["Applicant Uploads Corrected Document<br/>(Resubmission Desk)"] :::process
-    StudentResubmit --> ResubmitAudit["Audit Log Appended<br/>Returns to Under Review"] :::process
+    DefCheck -- "Yes (Missing/Mismatch Doc)" --> RaiseDef["Status: Deficiency Raised<br/>• Flagged Document Isolated<br/>• Specific Reason Issued"]
+    RaiseDef --> StudentAlert["Applicant Alerted via Dashboard<br/>Corrective Upload Desk Activated"]
+    StudentAlert --> StudentResubmit["Applicant Uploads Corrected Document<br/>(Resubmission Desk)"]
+    StudentResubmit --> ResubmitAudit["Audit Log Appended<br/>Returns to Under Review"]
     ResubmitAudit --> ScrutinyReview
 
     %% Branch D: Selection & Committee
-    DefCheck -- "No (Verified Complete)" --> QuotaMeritEngine["Quota-Aware Merit Selection Engine<br/>• NFST: Master's % + Priority Queue<br/>• NOS: 17 General ST + 3 PVTG Earmarked"] :::process
+    DefCheck -- "No (Verified Complete)" --> QuotaMeritEngine["Quota-Aware Merit Selection Engine<br/>• NFST: Master's % + Priority Queue<br/>• NOS: 17 General ST + 3 PVTG Earmarked"]
 
-    QuotaMeritEngine --> CommitteeReview["Selection Committee Review Desk<br/>• Merit Ranks Evaluated<br/>• Quota Promotions Verified<br/>• Manual Override Option (Logged)"] :::process
+    QuotaMeritEngine --> CommitteeReview["Selection Committee Review Desk<br/>• Merit Ranks Evaluated<br/>• Quota Promotions Verified<br/>• Manual Override Option (Logged)"]
 
-    CommitteeReview --> FinalDecision{Committee Decision} :::decision
+    CommitteeReview --> FinalDecision{"Committee Decision"}
 
-    FinalDecision -- "Rejected" --> StatusRejected["Status: Rejected<br/>Reason Recorded & Candidate Notified"] :::alert
-    FinalDecision -- "Selected" --> StatusSelected["Status: Selected<br/>Official Selection Confirmed"] :::success
+    FinalDecision -- "Rejected" --> StatusRejected["Status: Rejected<br/>Reason Recorded & Candidate Notified"]
+    FinalDecision -- "Selected" --> StatusSelected["Status: Selected<br/>Official Selection Confirmed"]
 
     %% Branch E: Post-Selection & DBT
-    StatusSelected --> SanctionGen["Generate Digital Sanction Letter<br/>• Official MoTA Award Number<br/>• Tenure & Monthly/Annual Rate"] :::success
-    SanctionGen --> AdmissionProof["Status: Admission Proof Pending<br/>(For Overseas / University Confirmation)"] :::process
-    AdmissionProof --> DBTDisbursed["Status: Disbursed<br/>DBT PFMS Gateway Handoff"] :::success
-    DBTDisbursed --> AnnualRenewal["Status: Renewal Pending<br/>Annual Academic Progress Verification"] :::process
-    AnnualRenewal --> RenewedStatus["Status: Renewed<br/>Next Fellowship Installment Released"] :::success
-    RenewedStatus --> End([🏆 Scholar Successfully Funded]) :::startEnd
+    StatusSelected --> SanctionGen["Generate Digital Sanction Letter<br/>• Official MoTA Award Number<br/>• Tenure & Monthly/Annual Rate"]
+    SanctionGen --> AdmissionProof["Status: Admission Proof Pending<br/>(For Overseas / University Confirmation)"]
+    AdmissionProof --> DBTDisbursed["Status: Disbursed<br/>DBT PFMS Gateway Handoff"]
+    DBTDisbursed --> AnnualRenewal["Status: Renewal Pending<br/>Annual Academic Progress Verification"]
+    AnnualRenewal --> RenewedStatus["Status: Renewed<br/>Next Fellowship Installment Released"]
+    RenewedStatus --> End(["🏆 Scholar Successfully Funded"])
+
+    %% Class assignments
+    class Start,End startEnd
+    class DuplicateCheck,DefCheck,FinalDecision decision
+    class StatusSubmitted,AIAnalysis,ScrutinyReview,StudentAlert,StudentResubmit,ResubmitAudit,QuotaMeritEngine,CommitteeReview,AdmissionProof,AnnualRenewal process
+    class FlagDuplicate,RaiseDef,StatusRejected alert
+    class StatusSelected,SanctionGen,DBTDisbursed,RenewedStatus success
 ```
 
 ---
